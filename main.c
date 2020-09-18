@@ -2,6 +2,7 @@
 #include <stdlib.h>
 #include <string.h>
 #include <windows.h>
+#include "personaje.h"
 
 void capturar_enteros();
 void capturar_enteros(){
@@ -42,7 +43,8 @@ int main(){
     do{
         printf("1.- Capturar enteros\n");
         printf("2.- Mostrar cadena n veces\n");
-        printf("3.- Personajes\n");
+        printf("3.- Agregar Personajes\n");
+        printf("4.- Mostrar personajes\n");
         printf("0.- Salir\n");
         scanf("%c",&op);
         fflush(stdin);
@@ -61,6 +63,10 @@ int main(){
                 mostrar(n, cadena);
                 break;
             case '3':
+                capturar_personajes();
+                break;
+            case '4':
+                mostrar_personajes();
                 break;
             default:
                 break;
