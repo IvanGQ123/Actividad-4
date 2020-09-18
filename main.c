@@ -26,8 +26,18 @@ void capturar_enteros(){
     system("CLS");
 }
 
+void mostrar(int num, char mensaje[]){
+    for(int i=0; i<num; i++){
+        printf("%d %s",i+1, mensaje);
+    }
+    system("PAUSE");
+    system("CLS");
+}
+
 int main(){
     char op;
+    char cadena[20];
+    int n;
 
     do{
         printf("1.- Capturar enteros\n");
@@ -43,6 +53,12 @@ int main(){
                 capturar_enteros();
                 break;
             case '2':
+                printf("Escribe una cadena de hasta 20 caracteres: ");
+                fgets(cadena, sizeof(cadena), stdin);
+                printf("Dame el numero de cuantas veces quieres que se repita: ");
+                scanf("%d",&n);
+                printf("\n");
+                mostrar(n, cadena);
                 break;
             case '3':
                 break;
